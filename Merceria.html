@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercería-Los Hilos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#carrito">Carrito</a></li>
+                <li><a href="#login">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio">
+            <h1>Bienvenidos a Mercería "Los Hilos"</h1>
+            <p>Todo lo que necesitas para tus proyectos de costura, bordado y manualidades, ¡en un solo lugar!</p>
+
+                <p>Descubre nuestra variedad, Explora nuestra amplia selección de:</p>
+                <ul><p>Hilos y telas en todos los colores y texturas.</p>
+                <p>Telas exclusivas para tus creaciones.</p>
+                <p>Botones, cintas y encajes que añadirán un toque especial a tus diseños.</p>
+                <p>Kits de manualidades para principiantes y expertos.</p></ul>
+        </section>
+        <section id="catalogo">
+            <h2>Catálogo</h2>
+            <div class="productos">
+                <div class="producto">
+                    <img src="Hilorojito.jpg" alt="Hilo rojo">
+                    <h3>Hilo rojo</h3>
+                    <p>$35.00</p>
+                    <button onclick="agregarAlCarrito('Hilo rojo', 20)">Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="Telazul.jpg" alt="Tela azul">
+                    <h3>Tela azul</h3>
+                    <p>$70.00</p>
+                    <button onclick="agregarAlCarrito('Tela azul', 20)">Agregar al carrito</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="gestion-productos">
+            <h2>Gestionar Productos</h2>
+            <form id="form-productos" onsubmit="manejarFormulario(event)">
+                <label for="id">ID:</label>
+                <input type="number" id="id" name="id" required>
+                
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" required>
+                
+                <button type="submit">Guardar Producto</button>
+            </form>
+        </section>        
+        <section id="carrito">
+            <h2>Carrito</h2>
+            <ul id="lista-carrito">
+                <li>Tu carrito está vacío.</li>
+            </ul>
+        </section>
+        <section id="login">
+            <h2>Iniciar Sesión</h2>
+            <form>
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Ingresar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p><a></a>📍 Visítanos en nuestra tienda física o compra en línea con envío rápido y seguro.</a></p>
+            <p>📞 ¿Dudas? Escríbenos en nuestro chat en vivo, estamos para ayudarte.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
